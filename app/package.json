@@ -1,43 +1,44 @@
 {
-  "name": "candy-drop",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@metaplex/js": "^4.7.0",
-    "@project-serum/anchor": "^0.18.2",
-    "@solana/wallet-adapter-base": "^0.9.1",
-    "@solana/web3.js": "^1.30.2",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "react-dotenv": "^0.1.0"
+  "name": "@solana/wallet-adapter-nextjs-starter",
+  "version": "0.8.2",
+  "author": "Solana Maintainers <maintainers@solana.foundation>",
+  "repository": "https://github.com/solana-labs/wallet-adapter",
+  "license": "Apache-2.0",
+  "files": [
+    "src",
+    ".gitignore",
+    "LICENSE",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "clean": "shx rm -rf .next",
+    "dev": "next dev",
+    "build": "yarn clean && next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@solana/pay": "^0.2.0",
+    "@solana/wallet-adapter-base": "^0.9.4",
+    "@solana/wallet-adapter-react": "^0.15.3",
+    "@solana/wallet-adapter-react-ui": "^0.9.5",
+    "@solana/wallet-adapter-wallets": "^0.16.0",
+    "@solana/web3.js": "^1.36.0",
+    "bignumber.js": "^9.0.2",
+    "crypto-js": "^4.1.1",
+    "ipfs-core": "^0.14.3",
+    "ipfs-http-client": "^56.0.3",
+    "next": "^12.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-loader-spinner": "^6.0.0-0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "parcel": "^2.3.1",
+    "prettier": "^2.5.1",
+    "shx": "^0.3.3"
   }
 }
